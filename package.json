@@ -1,0 +1,56 @@
+{
+  "name": "fifo-datetime",
+  "version": "1.4.10",
+  "description": "通过TS实现对Date对象的功能扩展，类似C#语言的DateTime对象",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./index.d.ts"
+    }
+  },
+  "scripts": {
+    "test": "mocha --reporter spec test/**/*.test.ts",
+    "build": "tsup src/index.ts",
+    "pub": "node ./scripts/publish.js",
+    "start": "npm run build -- --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fifo2024/datetime.git"
+  },
+  "files": [
+    "dist/*.js",
+    "dist/*.cjs",
+    "dist/**/&.js",
+    "dist/*.d.ts"
+  ],
+  "keywords": [
+    "date",
+    "datetime",
+    "fifo",
+    "time",
+    "typescript",
+    "c#"
+  ],
+  "author": "fifo2024",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/chai": "^5.0.0",
+    "@types/mocha": "^10.0.9",
+    "@types/node": "^22.7.6",
+    "chai": "^5.1.1",
+    "mocha": "^10.7.3",
+    "ts-node": "^10.9.2",
+    "prettier": "^3.3.3",
+    "tslib": "^2.8.0",
+    "tsup": "^8.3.0",
+    "typescript": "^5.6.3"
+  },
+  "dependencies": {},
+  "engines": {
+    "node": ">=18"
+  }
+}
